@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CD - AJAX</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script id="cd-template" type="text/x-handlebars-template">
+      <div class="cd-card">
+        <div class="poster">
+          <img src="{{ poster }}"/>
+        </div>
+        <h3>{{ title }}</h3>
+        <div>{{ author }}</div>
+        <small>{{ year }}</small>
+      </div>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fab fa-spotify"></i>
+        <span>HalfSpotify</span>
+      </div>
+      <div class="select-button">
+        <select id="author">
+            <option value="All">Tutti</option>
+            <option value="Bon Jovi">Bon Jovi</option>
+            <option value="Queen">Queen</option>
+            <option value="Sting">Sting</option>
+            <option value="Steve Gadd Band">Steve Gadd Band</option>
+            <option value="Iron Maiden">Iron Maiden</option>
+            <option value="Eric Clapton">Eric Clapton</option>
+            <option value="Deep Purple">Deep Purple</option>
+            <option value="Metallica">Metallica</option>
+            <option value="Dave Weckl">Dave Weckl</option>
+            <option value="Michael Jacjson">Michael Jacjson</option>
+        </select>
+        <button id="search" type="button">Search</button>
+      </div>
+    </header>
+    <main>
+      <div id="cds-container">
+
+      </div>
+    </main>
+  </body>
+</html>
